@@ -1,0 +1,434 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600";
+@font-face {
+  font-family: "untitled-font-1";
+  src: url("./fonts/untitled-font-1.eot");
+  src: url("./fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"), url("./fonts/untitled-font-1.woff") format("woff"), url("./fonts/untitled-font-1.ttf") format("truetype"), url("./fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-commenting:before {
+  content: "\61"; }
+
+.icon-cogs:before {
+  content: "\62"; }
+
+.icon-fighter-jet:before {
+  content: "\63"; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  color: #4b4b4b;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif; }
+
+* {
+  box-sizing: border-box;
+  padding: 0; }
+
+.app-messenger {
+  display: flex;
+  flex-direction: column; }
+  .app-messenger .header {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05); }
+    .app-messenger .header .sol {
+      width: 200px;
+      position: relative; }
+      .app-messenger .header .sol .sag-eylem {
+        position: absolute;
+        left: 100px;
+        top: 0; }
+      .app-messenger .header .sol button {
+        background: none;
+        line-height: 50px;
+        border: 0 none;
+        font-size: 20px;
+        cursor: pointer; }
+    .app-messenger .header .content {
+      flex-grow: 1; }
+      .app-messenger .header .content h2 {
+        line-height: 50px;
+        text-align: center;
+        margin: 0; }
+    .app-messenger .header .sag {
+      width: 300px; }
+      .app-messenger .header .sag .kullanici-bar {
+        line-height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px; }
+        .app-messenger .header .sag .kullanici-bar .profil-adi {
+          padding-right: 10px; }
+        .app-messenger .header .sag .kullanici-bar .profil-resmi {
+          line-height: 50px; }
+          .app-messenger .header .sag .kullanici-bar .profil-resmi img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 10px 0 0 0; }
+      .app-messenger .header .sag .kullanici-menusu {
+        min-width: 200px;
+        background: #FFF;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-top: 0 none; }
+        .app-messenger .header .sag .kullanici-menusu ul {
+          padding: 0;
+          margin: 0;
+          list-style: none; }
+          .app-messenger .header .sag .kullanici-menusu ul li {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 8px; }
+            .app-messenger .header .sag .kullanici-menusu ul li button {
+              background: none;
+              border: 0 none;
+              display: block;
+              text-align: center;
+              cursor: pointer;
+              width: 100%; }
+            .app-messenger .header .sag .kullanici-menusu ul li:hover {
+              background: rgba(0, 0, 0, 0.09); }
+        .app-messenger .header .sag .kullanici-menusu h2 {
+          font-size: 11px;
+          font-weight: 600;
+          margin: 10px 0;
+          display: block;
+          text-align: center; }
+  .app-messenger .main {
+    height: 100%;
+    display: flex;
+    overflow: hidden; }
+    .app-messenger .main .sidebar-sol {
+      border-right: 2px solid rgba(0, 0, 0, 0.05);
+      width: 200px; }
+    .app-messenger .main .sidebar-sag {
+      border-left: 2px solid rgba(0, 0, 0, 0.05);
+      width: 300px; }
+    .app-messenger .main .content {
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; }
+      .app-messenger .main .content .mesajlar {
+        flex-grown: 1; }
+      .app-messenger .main .content .mesaj-giris {
+        border-top: 3px solid #d06052;
+        height: 50px;
+        display: flex;
+        flex-direction: row; }
+        .app-messenger .main .content .mesaj-giris .yazi-giris {
+          flex-grow: 1; }
+          .app-messenger .main .content .mesaj-giris .yazi-giris textarea {
+            border: 0 none;
+            width: 100%;
+            height: 100%;
+            padding: 8px 15px; }
+        .app-messenger .main .content .mesaj-giris .eylemler button.yolla {
+          background: #d06052;
+          color: #FFF;
+          border: 0 none;
+          padding: 7px 15px;
+          line-height: 50px; }
+
+.mesajlar {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%; }
+  .mesajlar .mesaj {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 35px; }
+    .mesajlar .mesaj .mesaj-kullanici-resmi img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%; }
+    .mesajlar .mesaj .body-mesaj {
+      padding-left: 5px; }
+      .mesajlar .mesaj .body-mesaj .mesaj-text {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 4px;
+        border-radius: 10px; }
+    .mesajlar .mesaj.ben {
+      justify-content: flex-end; }
+      .mesajlar .mesaj.ben .body-mesaj .mesaj-text {
+        background: #ffcc97;
+        color: #FFF; }
+
+.kanallar {
+  overflow-y: auto;
+  height: 100%; }
+  .kanallar .kanal {
+    display: flex;
+    border-bottom: 1px solid #ffcc97;
+    cursor: pointer;
+    overflow: hidden; }
+    .kanallar .kanal .kullanici-resmi {
+      width: 30px;
+      padding-top: 10px;
+      padding-left: 3px; }
+      .kanallar .kanal .kullanici-resmi img {
+        max-width: 100%; }
+      .kanallar .kanal .kullanici-resmi .kanal-avatarlari {
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+        position: relative; }
+        .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-1 img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%; }
+        .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-2 img {
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0; }
+          .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-2 img:first-child {
+            left: 0;
+            top: 0; }
+        .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-3 img {
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          right: 0;
+          top: 0; }
+          .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-3 img:first-child {
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%; }
+          .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-3 img:last-child {
+            bottom: 0;
+            right: 0;
+            top: 15px;
+            width: 50%;
+            height: 50%; }
+        .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-4 img {
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          right: 0;
+          top: 0; }
+          .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-4 img:first-child {
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%; }
+          .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-4 img:nth-child(3n) {
+            bottom: 0;
+            right: 0;
+            top: 15px;
+            width: 50%;
+            height: 50%; }
+          .kanallar .kanal .kullanici-resmi .kanal-avatarlari.kanal-avatarlari-4 img:last-child {
+            left: 0;
+            bottom: 0;
+            top: 15px; }
+    .kanallar .kanal .kanal-bilgisi {
+      flex-grow: 1;
+      padding-left: 10px;
+      padding-right: 10px;
+      overflow: hidden; }
+      .kanallar .kanal .kanal-bilgisi h2 {
+        font-size: 12px;
+        font-weight: 550;
+        white-space: nowrap; }
+      .kanallar .kanal .kanal-bilgisi p {
+        font-size: 10px;
+        white-space: nowrap;
+        font-weight: 600; }
+    .kanallar .kanal.aktif {
+      background: lightgray; }
+    .kanallar .kanal.uyari .kanal-bilgisi p {
+      color: lawngreen; }
+
+.uyeler .uye {
+  display: flex;
+  border-bottom: 1px solid #ffcc97; }
+  .uyeler .uye .kullanici-resmi {
+    width: 30px; }
+    .uyeler .uye .kullanici-resmi img {
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      margin-top: 8px; }
+.uyeler .uye-bilgi {
+  flex-grow: 1;
+  padding-left: 10px; }
+  .uyeler .uye-bilgi h2 {
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 2px; }
+
+.baslik {
+  border-bottom: 2px solid #d06052;
+  font-size: 17px;
+  color: #FAA;
+  flex-grow: 1;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px black;
+  text-align: center; }
+
+.toolbar {
+  height: 50px;
+  display: flex;
+  position: relative;
+  flex-direction: row; }
+  .toolbar span {
+    line-height: 20px;
+    height: 30px;
+    display: block;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin: 10px 5px 0 2px;
+    cursor: -webkit-grab;
+    background: lightgreen; }
+  .toolbar label {
+    line-height: 50px; }
+  .toolbar input {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: left;
+    border: 0 none; }
+  .toolbar .kullanici-ara {
+    min-widht: 180px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    border-top: 0 none; }
+    .toolbar .kullanici-ara .kullanici-listesi {
+      display: flex;
+      flex-direction: column; }
+      .toolbar .kullanici-ara .kullanici-listesi .kullanici {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid;
+        border-color: rgba(0, 0, 0, 0.05);
+        padding: 5px; }
+        .toolbar .kullanici-ara .kullanici-listesi .kullanici:hover {
+          background: #d06052; }
+        .toolbar .kullanici-ara .kullanici-listesi .kullanici img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-top: 10px; }
+        .toolbar .kullanici-ara .kullanici-listesi .kullanici h2 {
+          padding-left: 8px;
+          font-size: 14px; }
+        .toolbar .kullanici-ara .kullanici-listesi .kullanici:last-child {
+          border-bottom: 0 none; }
+
+.kullanici-bar {
+  position: relative; }
+  .kullanici-bar button.Giris-Butonu {
+    background: rgba(0, 0, 0, 0.05);
+    color: #8c72ff;
+    line-height: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #d06052;
+    border-radius: 10px;
+    display: block;
+    top: 50px;
+    text-align: center;
+    width: 40%;
+    height: 50px; }
+  .kullanici-bar .kullanici-formu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-top: 0 none; }
+    .kullanici-bar .kullanici-formu .form-nesnesi label {
+      line-height: 30px;
+      min-width: 100px;
+      text-align: left;
+      margin-right: 8px; }
+    .kullanici-bar .kullanici-formu .form-nesnesi input[type="password"], .kullanici-bar .kullanici-formu .form-nesnesi input[type="text"] {
+      height: 30px;
+      line-height: 30px; }
+    .kullanici-bar .kullanici-formu .form-eylemleri {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+
+.form-nesnesi {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px; }
+  .form-nesnesi label {
+    font-weight: 600; }
+  .form-nesnesi input[type="password"], .form-nesnesi input[type="text"] {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 8px; }
+
+.form-eylemleri {
+  display: flex; }
+  .form-eylemleri button {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 7px 15px;
+    text-align: center; }
+    .form-eylemleri button.birincil {
+      background: #ffcc97;
+      color: #FFF; }
+
+.kullanici-durumu {
+  font-size: 8px;
+  border: 1px solid #d06052;
+  color: red;
+  border-radius: 2px; }
+  .kullanici-durumu.online {
+    color: #8c72ff; }
+
+.app-message {
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #ffcc97;
+  border-radius: 10px;
+  margin: 10px 0; }
+  .app-message.Hata {
+    background: #ff1600;
+    color: #FFF;
+    border-color: #ff1600; }
+
+/*# sourceMappingURL=app.css.map */
